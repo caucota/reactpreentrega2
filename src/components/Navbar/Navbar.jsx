@@ -1,13 +1,16 @@
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar = ({tipProd}) => {
     return(
         <div className='navbar'>
             <a className='navbar__menu' href='/'>Inicio</a>
-            <a className='navbar__menu' href='/TipoProducto'>Pizzas</a>
-            <a className='navbar__menu' href='/TipoProducto'>Empanadas</a>
-            <a className='navbar__menu' href='/TipoProducto'>Lomitos</a>
-
+            {
+                tipProd.map((opcion, index)=>{
+                    return <Link key={'opMenu'+index} className='navbar__menu' to={opcion.href+'/'+opcion.id}>{opcion.nombre}</Link>
+                    /*return <a key={'opMenu'+index} className='navbar__menu' href={opcion.href+'/'+opcion.id}>{opcion.nombre}</a>*/
+                })
+            }
         </div>
     )
 }
