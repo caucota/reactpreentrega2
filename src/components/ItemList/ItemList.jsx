@@ -48,7 +48,7 @@ const ItemList = ({tipoProd}) => {
     <div>
         {
           arrayProductosCategoria.map(prod => {
-                return <Item key={'producto_'+prod.id} nombre={prod.nombre}/>
+                return <Item key={'producto_'+prod.id} unProducto={prod}/>
             }
           )
         }

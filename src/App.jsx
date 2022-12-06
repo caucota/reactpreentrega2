@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import TipoProducto from './components/TipoProducto/TipoProducto';
 import Inicio from './components/Inicio/Inicio';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route exact path='/' element={<Inicio />}/>
         <Route exact path='/category/:nombreCategoria' element={<ItemListContainer />}/>
         <Route exact path='/category' element={<ItemListContainer />}/>
+        <Route exact path='/item/:id' element={<ItemDetailContainer />}/>
         <Route exact path={opcionesMenu[0].href+'/:id'} element={<TipoProducto />}/>
       </Routes>
     </BrowserRouter>

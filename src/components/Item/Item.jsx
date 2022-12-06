@@ -1,13 +1,10 @@
 import React from 'react'
 
-const Item = (unProducto) => {
-  const arrayProductos = JSON.parse(localStorage.getItem("productosVta"));
-  let arrayProductosCategoria = arrayProductos.filter(prod => prod.id == unProducto);
-
+const Item = ({unProducto}) => {
   return (
     <>
-      <a>{unProducto.nombre}</a>
-    <button>{unProducto.nombre}</button><br/>
+      <a href={'/item/'+ unProducto.id} >{unProducto.nombre}</a>
+      <br/>
     </>
   )
 }
