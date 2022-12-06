@@ -1,9 +1,13 @@
 import React from 'react'
 
 const Item = (unProducto) => {
+  const arrayProductos = JSON.parse(localStorage.getItem("productosVta"));
+  let arrayProductosCategoria = arrayProductos.filter(prod => prod.id == unProducto);
+
   return (
     <>
-    <button>{unProducto.title}</button><br/>
+      <a>{unProducto.nombre}</a>
+    <button>{unProducto.nombre}</button><br/>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Item from '../Item/Item'
-
+/*
 const MostrarDetalleProdAsyn = new Promise((resolve, rejected)=> {
   setTimeout(()=>{
     const arrayArt = [{id:1, title:'Naranjas', description: 'Precio por kg', price:180, pictureUrl:'https://www.bing.com/ck/a?!&&p=1e3330feb6d21734JmltdHM9MTY2OTUwNzIwMCZpZ3VpZD0zOTE3ZDUzMi1mNDgwLTYzZmMtM2NiZi1jNzUxZjUyZTYyMDAmaW5zaWQ9NTQwMA&ptn=3&hsh=3&fclid=3917d532-f480-63fc-3cbf-c751f52e6200&u=a1L2ltYWdlcy9zZWFyY2g_cT1pbWFnZW4rbmFyYW5qYSZpZD0yMjJBRUYyMkQ1REM2MzRDMTNGRkRFQUNCNzBGMEQxMEYzNUYxMTgwJkZPUk09SVFGUkJB&ntb=1'},
@@ -25,12 +25,30 @@ const ItemList = () => {
     console.log(arrayProductos)
 
   });
-
   return (
     <div>
         {
           arrayProductos.map(prod => {
                 return <Item key={'producto_'+prod.id} title={prod.title}/>
+            }
+          )
+        }
+
+    </div>
+  )
+}
+*/
+const ItemList = ({tipoProd}) => {
+  const arrayProductos = JSON.parse(localStorage.getItem("productosVta"));
+  let arrayProductosCategoria = arrayProductos;
+  if(tipoProd !== '' ){
+    arrayProductosCategoria = arrayProductos.filter(prod => prod.tipo == tipoProd);
+  }
+  return (
+    <div>
+        {
+          arrayProductosCategoria.map(prod => {
+                return <Item key={'producto_'+prod.id} nombre={prod.nombre}/>
             }
           )
         }
