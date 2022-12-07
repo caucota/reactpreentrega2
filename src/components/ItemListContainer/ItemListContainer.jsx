@@ -7,6 +7,7 @@ const ItemListContainer = (() => {
     if(nombreCategoria == undefined){
         nombreCategoria = '';
     }
+    
     return( 
         <div>
             <ItemList tipoProd = {nombreCategoria}/>

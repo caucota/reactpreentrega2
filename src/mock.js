@@ -2,21 +2,21 @@ export const opcionesMenu = [
     {
         id:'1',
         nombre:'Pizzas',
-        href:'/TipoProducto',
+        href:'/category',
         img:'https://club.elnuevodia.com/wp-content/uploads/2019/11/Abbys-Pizza.jpg'
     },
 
     {
         id:'2',
         nombre:'Empanadas',
-        href:'/TipoProducto',
+        href:'/category',
         img:'https://www.impulsonegocios.com/wp-content/uploads/2020/06/EMPANADAS.jpg'
     },
 
     {
         id:'3',
         nombre:'Lomitos',
-        href:'/TipoProducto',
+        href:'/category',
         img:'https://th.bing.com/th/id/OIP.3mMXOnsdPdk1decc80WBhQHaEX?pid=ImgDet&rs=1'
     }
 ]

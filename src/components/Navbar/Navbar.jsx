@@ -10,7 +10,7 @@ const NavBar = ({tipProd}) => {
             <div className='opciones__menu'>
                 {
                     tipProd.map((opcion, index)=>{
-                        return <Link key={'opMenu'+index} className='navbar__menu' to={urlCategory+'/'+opcion.nombre}>{opcion.nombre}</Link>
+                        return <Link key={'opMenu'+index} className='navbar__menu' to={opcion.href+'/'+opcion.nombre}>{opcion.nombre}</Link>
                         /*
                         return <Link key={'opMenu'+index} className='navbar__menu' to={opcion.href+'/'+opcion.id}>{opcion.nombre}</Link>
                         */
