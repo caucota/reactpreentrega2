@@ -1,6 +1,7 @@
 import React from 'react'
 import Item from '../Item/Item'
 import { productosVta } from '../../mock';
+import { useState, useEffect } from 'react';
 /*
 const MostrarDetalleProdAsyn = new Promise((resolve, rejected)=> {
   setTimeout(()=>{
@@ -40,7 +41,7 @@ const ItemList = () => {
 }
 */
 const ItemList = ({tipoProd}) => {
-  //const arrayProductos = JSON.parse(localStorage.getItem("productosVta"));
+  /*
   let arrayProductosCategoria = productosVta;
   if(tipoProd !== '' ){
     arrayProductosCategoria = productosVta.filter(prod => prod.tipo == tipoProd);
@@ -56,6 +57,34 @@ const ItemList = ({tipoProd}) => {
 
     </div>
   )
+  */
+  const [item, setItem] = useState(productosVta);
+  const arrayProductosCategoria = [];
+
+  const FiltrarProductos = new Promise((resolve, reject)=>{
+    arrayProductosCategoria = productosVta.filter((prod) => prod.tipo == tipoProd)
+    
+    resolve(arrayProductosCategoria);
+  }
+  )
+  useEffect( ()=>{
+    FiltrarProductos.then( (response)=>{
+      setItem(response)
+      console.log(response, item)
+    })
+  }, [tipoProd])
+  return(
+    <div>
+        {
+          arrayProductosCategoria.map(prod => {
+                return <Item key={'producto_'+prod.id} unProducto={prod}/>
+            }
+          )
+        }
+
+    </div>    
+  )
+
 }
 
 export default ItemList
