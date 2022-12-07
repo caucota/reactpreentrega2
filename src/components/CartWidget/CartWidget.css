@@ -1,0 +1,10 @@
+.cartWidget{
+    display: flex;
+    flex-direction: column;
+    padding: 0% 2% 0% 2%;
+    
+}
+
+.numero__cart{
+    margin: 0px;
+}

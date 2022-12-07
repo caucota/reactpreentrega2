@@ -1,0 +1,17 @@
+.card__button__container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.detail__button{
+    padding: 8px 10px 8px 10px;
+}
+
+.card__counter{
+    width: 80px;
+    border: 1px solid black;
+    margin: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

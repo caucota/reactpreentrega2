@@ -82,7 +82,7 @@ export const productosVta = [
         tipo : 'Lomitos',
         precio:'950',
         stock:'10',
-        img:'https://th.bing.com/th/id/OIP.3mMXOnsdPdk1decc80WBhQHaEX?pid=ImgDet&rs=1'
+        img:'https://www.lavoz.com.ar/resizer/q0EWQsivbaCi-nlLIza6yMJfdjA=/640x427/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/5SAPDW526JFPHBQHZ222FSI6DU.jpg'
     },
 
     {
@@ -91,7 +91,7 @@ export const productosVta = [
         tipo : 'Lomitos',
         precio:'1200',
         stock:'10',
-        img:'https://th.bing.com/th/id/OIP.3mMXOnsdPdk1decc80WBhQHaEX?pid=ImgDet&rs=1'
+        img:'https://www.lavoz.com.ar/resizer/q0EWQsivbaCi-nlLIza6yMJfdjA=/640x427/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/5SAPDW526JFPHBQHZ222FSI6DU.jpg'
     },
     
     {
@@ -100,6 +100,6 @@ export const productosVta = [
         tipo : 'Lomitos',
         precio:'1500',
         stock:'10',
-        img:'https://th.bing.com/th/id/OIP.3mMXOnsdPdk1decc80WBhQHaEX?pid=ImgDet&rs=1'
+        img:'https://www.lavoz.com.ar/resizer/q0EWQsivbaCi-nlLIza6yMJfdjA=/640x427/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/5SAPDW526JFPHBQHZ222FSI6DU.jpg'
     }
 ]

@@ -1,3 +1,8 @@
 .cartUnProd{
     width: 50px;
 }
+
+.card__detail__container{
+    display: flex;
+    justify-content: center;
+}
