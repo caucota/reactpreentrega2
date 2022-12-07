@@ -20,7 +20,7 @@ const ItemList = ({tipoProd}) => {
     })
   }, [tipoProd])
   return(
-    <div>
+    <div className='cards__container'>
         {
           arrayProductosCategoria && arrayProductosCategoria.map(prod => {
                 return <Item key={'producto_'+prod.id} unProducto={prod}/>
