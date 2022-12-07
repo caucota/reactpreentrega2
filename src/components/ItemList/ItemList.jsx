@@ -1,5 +1,6 @@
 import React from 'react'
 import Item from '../Item/Item'
+import "./ItemList.css"
 import { productosVta } from '../../mock';
 /*
 const MostrarDetalleProdAsyn = new Promise((resolve, rejected)=> {
@@ -46,7 +47,7 @@ const ItemList = ({tipoProd}) => {
     arrayProductosCategoria = productosVta.filter(prod => prod.tipo == tipoProd);
   }
   return (
-    <div>
+    <div className='cards__container'>
         {
           arrayProductosCategoria.map(prod => {
                 return <Item key={'producto_'+prod.id} unProducto={prod}/>
